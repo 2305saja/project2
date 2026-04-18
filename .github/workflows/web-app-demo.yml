@@ -60,7 +60,7 @@ jobs:
           path: gp1-demo.tar
 
       - name: Install Bandit
-              run: pip install bandit
+             run: pip install bandit
             
       - name: Run Bandit
               run: bandit -r .
