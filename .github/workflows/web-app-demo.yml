@@ -28,8 +28,7 @@ jobs:
         run: pytest
 
       - name: Run Security Scan (Bandit)
-        run: |
-          bandit -r . || true
+        run: bandit -r . || true
 
   docker:
     runs-on: ubuntu-latest
@@ -58,9 +57,3 @@ jobs:
         with:
           name: docker-image
           path: gp1-demo.tar
-
-       - name: Install Bandit
-         run: pip install bandit
-      
-      - name: Run Bandit
-        run: bandit -r .
